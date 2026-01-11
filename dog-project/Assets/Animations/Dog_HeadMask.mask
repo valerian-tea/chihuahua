@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Dog_HeadMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Dog_001
+    m_Weight: 0
+  - m_Path: Dog_001_rig
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004
+    m_Weight: 1
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.L/thigh.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.L/thigh.L/shin.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.L/thigh.L/shin.L/foot.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.L/thigh.L/shin.L/foot.L/toe.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.R/thigh.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.R/thigh.R/shin.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.R/thigh.R/shin.R/foot.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/shoulder.R/thigh.R/shin.R/foot.R/toe.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.003
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.003/spine.002
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.003/spine.002/spine.001
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.003/spine.002/spine.001/spine
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006
+    m_Weight: 1
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.L/front_thigh.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.L/front_thigh.L/front_shin.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.L/front_thigh.L/front_shin.L/front_foot.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.L/front_thigh.L/front_shin.L/front_foot.L/front_toe.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.R/front_thigh.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.R/front_thigh.R/front_shin.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.R/front_thigh.R/front_shin.R/front_foot.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/front_shoulder.R/front_thigh.R/front_shin.R/front_foot.R/front_toe.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/spine.007
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/spine.007/spine.008
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/spine.007/spine.008/scull
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/spine.007/spine.008/scull/ear.L
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/spine.007/spine.008/scull/ear.R
+    m_Weight: 0
+  - m_Path: Dog_001_rig/Root/spine.004/spine.005/spine.006/spine.007/spine.008/scull/jaw
+    m_Weight: 1
