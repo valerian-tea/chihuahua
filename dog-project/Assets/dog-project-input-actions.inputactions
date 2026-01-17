@@ -278,10 +278,10 @@
                 {
                     "name": "up",
                     "id": "a3e6c3bf-2a3d-4278-a5fd-f6c2c3ab207c",
-                    "path": "",
+                    "path": "<Joystick>/stick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse;Joystick",
                     "action": "MoveDog",
                     "isComposite": false,
                     "isPartOfComposite": true
