@@ -151,17 +151,13 @@ namespace ithappy.Animals_FREE
         {
             private readonly CharacterController m_Controller;
             private readonly Transform m_Transform;
+            private float m_TurnInput;
 
             private float m_WalkSpeed;
             private float m_RunSpeed;
             private float m_RotateSpeed;
 
             private Space m_Space;
-
-            private readonly float m_Luft = 75f;
-
-            private float m_TargetAngle;
-            private bool m_IsRotating = false;
 
             private Vector3 m_Normal;
             private Vector3 m_GravityAcelleration = Physics.gravity;
@@ -221,6 +217,7 @@ namespace ithappy.Animals_FREE
             {
                 var cameraLook = Vector3.Normalize(target - m_Transform.position);
                 var targetForward = m_LastForward;
+                m_TurnInput = axis.x;
 
                 ConvertMovement(in axis, in cameraLook, out var movement);
                 if (movement.sqrMagnitude > 0.5f)
@@ -230,7 +227,6 @@ namespace ithappy.Animals_FREE
 
                 CaculateGravity(deltaTime, out isAir);
                 Displace(deltaTime, in movement, isRun);
-                Turn(in targetForward, isMoving);
                 UpdateRotation(deltaTime);
 
                 GenAnimationAxis(in movement, out animAxis);
@@ -305,47 +301,14 @@ namespace ithappy.Animals_FREE
                 }
             }
 
-            private void Turn(in Vector3 targetForward, bool isMoving)
-            {
-                var angle = Vector3.SignedAngle(
-                    m_Transform.forward,
-                    Vector3.ProjectOnPlane(targetForward, Vector3.up),
-                    Vector3.up
-                );
-
-                if (!m_IsRotating)
-                {
-                    if (!isMoving && Mathf.Abs(angle) < m_Luft)
-                    {
-                        m_IsRotating = false;
-                        return;
-                    }
-
-                    m_IsRotating = true;
-                }
-
-                m_TargetAngle = angle;
-            }
-
             private void UpdateRotation(float deltaTime)
             {
-                if (!m_IsRotating)
-                {
+                // Deadzone to prevent jitter
+                if (Mathf.Abs(m_TurnInput) < 0.01f)
                     return;
-                }
 
-                var rotDelta = m_RotateSpeed * deltaTime;
-                if (rotDelta + Mathf.PI * 2f + Mathf.Epsilon >= Mathf.Abs(m_TargetAngle))
-                {
-                    rotDelta = m_TargetAngle;
-                    m_IsRotating = false;
-                }
-                else
-                {
-                    rotDelta *= Mathf.Sign(m_TargetAngle);
-                }
-
-                m_Transform.Rotate(Vector3.up, rotDelta);
+                float rotation = m_TurnInput * m_RotateSpeed * deltaTime;
+                m_Transform.Rotate(Vector3.up, rotation);
             }
         }
 
